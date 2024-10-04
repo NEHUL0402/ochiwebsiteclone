@@ -1,0 +1,60 @@
+/* Clients.css */
+.hover-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-effect::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.hover-effect:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.animated-underline {
+  position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
+  display: inline-block; /* Allows width and height to be applied correctly */
+  color: black; /* Change the text color as needed */
+  overflow: hidden; /* Prevent overflow of the pseudo-element */
+}
+
+.animated-underline::after {
+  content: ""; /* Creates a pseudo-element for the underline */
+  position: absolute; /* Absolutely positioned relative to the button */
+  left: 0; /* Start from the left */
+  bottom: 0; /* Align at the bottom of the text */
+  width: 100%; /* Full width of the button */
+  height: 1px; /* Thickness of the underline */
+  background: black; /* Color of the underline */
+  transform: translateX(0); /* Start at the initial position */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transition for the animation */
+  opacity: 1; /* Initially visible */
+}
+
+.animated-underline:hover::after {
+  transform: translateX(100%); /* Move to the right on hover */
+  opacity: 0; /* Fade out on hover */
+}
+
+.animated-underline:hover {
+  color: black; /* Keep the text color same on hover, adjust as necessary */
+}
+
+
+.shutter-effect {
+  transition: transform 0.5s ease-in-out;
+}
+.shutter-effect:hover {
+  transform: translateY(-10px);
+}
