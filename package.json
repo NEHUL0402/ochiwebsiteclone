@@ -1,12 +1,9 @@
 {
-  "homepage": "https://NEHUL0402.github.io/ochiwebsiteclone",
   "name": "react_website_clone_1",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
